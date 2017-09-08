@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Gmail Imports (not important for the actual crawler)
-from SimplifiedGmailApiSubmodule.SendGmailSimplified import SimplifiedGmailApi
+from SendGmailSimplified.SendGmailSimplified import SimplifiedGmailApi
 
 # My imports (the crawler)
 import json
@@ -91,7 +91,7 @@ else:
                          "m&ouml;glicherweise neuen Stundenplan [.pdf] zu kommen)</p><br><p>Fallback link: " \
                          "<a href=\"" + URL_OF_WEBSITE + "\">" + URL_OF_WEBSITE + "</a></p></body></html>"
 
-            DIR_OF_GMAIL_API_FILES = os.path.join(DIR_OF_SCRIPT, os.path.join("SimplifiedGmailApiSubmodule", "gmail_api_files"))
+            DIR_OF_GMAIL_API_FILES = os.path.join(DIR_OF_SCRIPT, os.path.join("SendGmailSimplified", "gmail_api_files"))
             PATH_OF_CLIENT_DATA = os.path.join(DIR_OF_GMAIL_API_FILES, "client_data.json")
             PATH_OF_CLIENT_SECRET = os.path.join(DIR_OF_GMAIL_API_FILES, "client_secret.json")
             GmailServer = SimplifiedGmailApi(PATH_OF_CLIENT_DATA, PATH_OF_CLIENT_SECRET, DIR_OF_GMAIL_API_FILES)
